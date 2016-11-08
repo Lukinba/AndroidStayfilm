@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lucasimoes.projetostayfilm.view.DashBoardActivity"
+    android:background="@color/colorPrimary"
+    tools:ignore="MissingConstraints">
+
+
+    <ListView
+        android:id="@+id/lstDatas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="0dp"
+        android:background="?attr/colorButtonNormal"
+        tools:ignore="UnusedAttribute" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:id="@+id/btnfloating"
+        app:layout_constraintRight_toRightOf="@+id/lstDatas"
+        app:layout_constraintBottom_toBottomOf="@+id/lstDatas"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        app:elevation="5dp"
+        app:backgroundTint="@color/colorPrimaryDark"
+        app:rippleColor="?attr/colorBackgroundFloating" />
+</android.support.constraint.ConstraintLayout>
