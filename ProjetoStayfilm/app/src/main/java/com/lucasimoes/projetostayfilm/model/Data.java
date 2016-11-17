@@ -7,26 +7,15 @@ import java.util.List;
 public class Data {
     private Long id;
     private String data;
-    private String horarios;
-    private int img;
-
-
-
-    private boolean datas;
     private List<Item> itens = new ArrayList<>();
-
     public static final boolean LISTA = false;
 
-
     //simulacao
-    public Data(String data, String horario){
+    public Data(String data){
         this.data = data;
-        this.horarios = horario;
-
     }
 
     public Data(){
-
     }
     //fim
 
@@ -46,38 +35,18 @@ public class Data {
         this.data = data;
     }
 
-
-    public String getHorarios() {
-        return horarios;
-    }
-
-    public void setHorarios(String horarios) {
-        this.horarios = horarios;
-    }
-
-    public int getImg() {
-        return img;
-    }
-
-    public void setImg(int img) {
-        this.img = img;
-    }
-
-
+            //criando a ListDatas
     public boolean isDatas() {
         boolean datas = true;
 
         for (Item item : itens){
-            if(!item.isDatas()){
+            if(!item.isHorarios()){
                 datas = false;
                 break;
             }
         }
-
-
         return datas && itens.size() > 0;
     }
-
 
     public List<Item> getItens() {
         List<Item> novaLista = null;

@@ -24,7 +24,7 @@
             android:name=".view.DashBoardActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".view.ActivityCuradoria" />
-        <activity android:name=".view.DetalheData"></activity>
+        <activity android:name=".view.DetalheData" />
     </application>
 
 </manifest>

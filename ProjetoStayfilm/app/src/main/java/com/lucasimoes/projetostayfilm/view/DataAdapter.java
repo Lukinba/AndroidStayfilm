@@ -70,14 +70,8 @@ public class DataAdapter extends BaseAdapter {
 
         Data dtas = dao.localizar(mapa.get(linha));
 
-        TextView itemdata = (TextView)layout.findViewById(R.id.txtData);
-        TextView itemHoraUm = (TextView) layout.findViewById(R.id.txtHoraUm);
-        TextView itemHoraDois = (TextView) layout.findViewById(R.id.txtHoraDois);
-        TextView itemHoraTres = (TextView) layout.findViewById(R.id.txtHoraTres);
-
-        itemdata.setText(dtas.getData());
-        itemHoraUm.setText(dtas.getHorarios());
-
+        TextView Titulodata = (TextView)layout.findViewById(R.id.txtData);
+        Titulodata.setText(dtas.getData());
 
 
         return layout;

@@ -30,9 +30,7 @@ public class DashBoardActivity extends AppCompatActivity {
 
     private ListView listDatas;
     private DataAdapter adapter;
-    private Data data = new Data();
-    //ArrayList<Item> datas;
-    String date;
+   // private Data data = new Data();
     String funcao;
 
     public static final int EDITAR_ITEM = 0;
@@ -42,9 +40,6 @@ public class DashBoardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
-
-            //colhendo dados de data atual
-        date = DateFormat.getDateInstance().format(new Date());
 
         listDatas = (ListView) findViewById(R.id.lstDatas);
         adapter = new DataAdapter(this, Data.LISTA);

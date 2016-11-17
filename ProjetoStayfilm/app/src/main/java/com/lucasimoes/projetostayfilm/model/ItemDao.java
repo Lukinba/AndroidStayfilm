@@ -1,23 +1,34 @@
 package com.lucasimoes.projetostayfilm.model;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class ItemDao {
 
-    public static ItemDao instace;
-    private List<Item> lista;
-    private long id= 0;
+    private static ItemDao instace;
+    private List<Item> listaIt;
+    private static long id= 0;
 
-    private ItemDao(List<Item> lista){
-        this.lista = lista;
+    private ItemDao(List<Item> listaItem){
+        this.listaIt = listaItem;
     }
 
-    public static ItemDao getInstace(List<Item> lista){
-        ItemDao dao = new ItemDao(lista);
-        ItemDao.instace = dao;
+    //simulacao
+    private ItemDao(){
+        listaIt = new ArrayList<>();
+        salvar(new Item("das 08h ao 12h"));
+        salvar(new Item("das 12h as 15h"));
+        salvar(new Item("das 17h as 22h"));
 
+
+    }
+    //fim
+
+    public static ItemDao getInstace(List<Item> listaIt){
+        ItemDao dao = new ItemDao(listaIt);
+        ItemDao.instace = dao;
         return dao;
     }
 
@@ -25,13 +36,17 @@ public class ItemDao {
         return instace;
     }
 
-    public void salvar(Item obj){
-        if (obj.getId() == null){
+    public void salvar(Item item){
+        if (item.getId() == null){
             // incluir
-            obj.setId(id++);
-            lista.add(obj);
+            item.setId(id++);
+            listaIt.add(item);
 
         }else{
+            Item obj = localizar(item.getId());
+            obj.setHorario(item.getHorario());
+            obj.setHorarios(item.isHorarios());
+
             // atualizar
 //            Item Todo = localizar(obj.getId());
 //            Todo.setFeito(obj.isFeito());
@@ -42,9 +57,9 @@ public class ItemDao {
     public Item localizar (long id){
         Item obj = null;
 
-        for (Item todo : lista){
-            if (todo.getId() == id){
-                obj = todo;
+        for (Item item : listaIt){
+            if (item.getId() == id){
+                obj = item;
                 break;
             }
         }
@@ -52,14 +67,7 @@ public class ItemDao {
     }
 
     public List<Item> listar(){
-        return lista;
+        return listaIt;
     }
-
-//    public void remover(long id){
-//        Item item = localizar(id);
-//        if (item != null)
-//            lista.remove(item);
-//
-//    }
 
 }

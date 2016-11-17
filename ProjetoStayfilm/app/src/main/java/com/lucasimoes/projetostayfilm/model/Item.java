@@ -2,11 +2,17 @@ package com.lucasimoes.projetostayfilm.model;
 
 public class Item {
     private Long id;
-    private String data;
     private String horario;
-    private int img;
-    private boolean datas;
     private boolean horarios;
+
+    //simulacao
+    public Item(String Horario){
+        this.horario = Horario;
+    }
+
+    public Item(){
+    }
+    //fim
 
     public Long getId() {
         return id;
@@ -16,13 +22,6 @@ public class Item {
         this.id = id;
     }
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
 
     public String getHorario() {
         return horario;
@@ -32,21 +31,6 @@ public class Item {
         this.horario = horario;
     }
 
-    public int getImg() {
-        return img;
-    }
-
-    public void setImg(int img) {
-        this.img = img;
-    }
-
-    public boolean isDatas() {
-        return datas;
-    }
-
-    public void setDatas(boolean datas) {
-        this.datas = datas;
-    }
 
     public boolean isHorarios(){
         return horarios;
@@ -58,12 +42,16 @@ public class Item {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         Item novo = new Item();
-
         novo.id = (long)id;
-        novo.data = data;
-        novo.horario = horario;
-        novo.img = img;
+        novo.horarios = horarios;
+        novo.horario = new String(horario.getBytes());
 
         return novo;
+    }
+
+    @Override
+    public String toString(){
+        return "Item{" + "id=" + id + ", Horario='" + horario + '\'' +
+                ", concluido=" + horarios + '}';
     }
 }
