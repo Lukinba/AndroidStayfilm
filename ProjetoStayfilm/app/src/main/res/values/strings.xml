@@ -3,27 +3,9 @@
     <string name="entrar">Entrar</string>
     <string name="login">Login</string>
     <string name="senha">Senha</string>
-    <string name="historico">Historico</string>
-    <string name="curadoria">Curadoria</string>
-    <string name="hoje">Hoje</string>
-    <string name="seguda_feira">Seguda-feira</string>
-    <string name="_23_10_1990">  23/10/1990 </string>
+    <string name="HorarioStatus">Não Definido</string>
     <string name="stayfilm_logotipo">Stayfilm Logotipo</string>
     <string name="esqueceu_sua_senha">Esqueceu sua senha?</string>
-    <string name="monitoria">Monitoria</string>
-    <string name="sair">Sair</string>
-    <string name="data">Data</string>
-    <string name="per_odo">Período</string>
-    <string name="hora_inicio">Hora inicio</string>
-    <string name="hora_fim">Hora Fim</string>
-    <string name="dia_inteiro">Dia Inteiro</string>
-    <string name="observacoes">Observações</string>
-    <string name="salvar">Salvar</string>
     <string name="txtRecuperar">Digite o endereço de email que você utilizou para se registrar. Nós enviaremos seu nome de usuário e senha! :)</string>
-    <string name="horarios">08:00 as 10:00hs</string>
-    <string name="nova_data">Nova Data</string>
-    <string name="horario_inicial">Horario inicial</string>
-    <string name="horario_final">Horario Final</string>
-    <string name="horainicio">20:00hs</string>
-    <string name="horafim">22:00hs</string>
+
 </resources>
